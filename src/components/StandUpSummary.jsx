@@ -2,11 +2,27 @@ import React from 'react';
 
 const StandUpSummary = ({ date, team, summary }) => {
   return (
-    <div>
-      <h3>Stand-Up Summary</h3>
-      <p>Date: {date}</p>
-      <p>Team: {team}</p>
-      <p>Summary: {summary}</p>
+    <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 my-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border border-indigo-200">
+      <h3 className="text-xl font-bold text-indigo-800 mb-4 flex items-center">
+        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+        Stand-Up Summary
+      </h3>
+      <div className="space-y-3">
+        <div className="flex items-center text-indigo-700">
+          <span className="font-medium w-20">Date:</span>
+          <span>{date}</span>
+        </div>
+        <div className="flex items-center text-indigo-700">
+          <span className="font-medium w-20">Team:</span>
+          <span>{team}</span>
+        </div>
+        <div className="flex items-center text-indigo-600">
+          <span className="font-medium w-20">Summary:</span>
+          <span>{summary}</span>
+        </div>
+      </div>
     </div>
   );
 };

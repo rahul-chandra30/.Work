@@ -3,60 +3,174 @@ import Layout from '../layouts/BlogPost.astro';
 ---
 
 <Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
+  title="Akrity.Work - Cheat Sheet"
+  description="A quick guide to MDX syntax and custom components for Akrity.Work"
+  pubDate={new Date('March 16 2025')}
+  heroImage="/blog-placeholder-about.jpg"
 >
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+  <style>
+    .syntax {
+      background-color: #2c2c2c;
+      padding: 0.5em 1em;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #f4f4f4;
+      display: block;
+      margin: 0.5em 0;
+      white-space: pre-wrap;
+    }
+    .notice {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      padding: 1em;
+      border-radius: 4px;
+      margin-bottom: 2em;
+      color: #856404;
+    }
+    p {
+      margin-bottom: 1em;
+      line-height: 1.6;
+    }
+    h2 {
+      margin-top: 2em;
+      margin-bottom: 1em;
+      color: rgb(var(--gray-dark));
+    }
+    .feature-section {
+      margin-bottom: 2em;
+    }
+  </style>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+  <h1>Welcome to Akrity.Work - Cheat Sheet</h1>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+  <div class="notice">
+    <p><strong>Notice:</strong> In all custom components, values are separated by commas <span class="syntax">Task: Title, Assignee, Status</span>Type the syntax carefully to avoid errors!</p>
+    <p>A newline must be added above and below each component for smooth rendering in your MDX file.</p>
+  </div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+  <p>
+    New to Akrity.Work? This page covers the basics of MDX and our custom components. Syntax is shown in <span class="syntax">styled boxes</span> below each description—use these to write posts, track tasks, and share updates with the team!
+  </p>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
+  <h2>Native MDX Features</h2>
+
+  <div class="feature-section">
+    <p>Headings: Organize your content with titles and sections.</p>
+    <span class="syntax"># Main Title
+## Subsection</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Paragraphs: Write regular text, separated by line breaks.</p>
+    <span class="syntax">First paragraph.
+Second paragraph.</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Bold & Italic: Emphasize key words.</p>
+    <span class="syntax">**Bold this**
+*Italicize that*</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Lists (Unordered): Create bullet points.</p>
+    <span class="syntax">- Item one
+- Item two
+- Item three</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Lists (Ordered): Make numbered lists.</p>
+    <span class="syntax">1. First step
+2. Second step
+3. Third step</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Links: Add clickable URLs.</p>
+    <span class="syntax">[Visit Akrity.Work](https://akrity.work)</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Blockquotes: Quote someone or highlight text.</p>
+    <span class="syntax">> This is a quote.</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Horizontal Rules: Add a divider line.</p>
+    <span class="syntax">---</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Code Blocks: Display code with highlighting.</p>
+    <span class="syntax">```javascript
+console.log('Hello');
+```</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Images: Embed images with alt text (use real paths).</p>
+    <span class="syntax">![Dashboard](/blog-placeholder-1.jpg)</span>
+  </div>
+
+  <h2>Custom Components</h2>
+
+  <div class="feature-section">
+    <p>Meeting: Log a team meeting.</p>
+    <span class="syntax">Meeting: Attendees, Time, Agenda, Outcome</span>
+    <span class="syntax">Meeting: Prathamesh and Rahul, 4-5 PM, Backend Sync, Resolved Issues</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Task: Track a task’s progress.</p>
+    <span class="syntax">Task: Title, Assignee, Status</span>
+    <span class="syntax">Task: Fix login bug, Rahul, In Progress</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Blocker: Report an issue.</p>
+    <span class="syntax">Blocker: Description, ReportedBy</span>
+    <span class="syntax">Blocker: API downtime, Prathamesh</span>
+  </div>
+
+  <div class="feature-section">
+    <p>ActionItem: Assign a task with a due date.</p>
+    <span class="syntax">ActionItem: Description, Assignee, DueDate</span>
+    <span class="syntax">ActionItem: Update README, Rahul, 2025-03-20</span>
+  </div>
+
+  <div class="feature-section">
+    <p>StandUpSummary: Recap a stand-up meeting.</p>
+    <span class="syntax">StandUpSummary: Date, Team, Summary</span>
+    <span class="syntax">StandUpSummary: 2025-03-14, Backend Team, Resolved API issues</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Progress: Show task progress.</p>
+    <span class="syntax">Progress: Task, Percentage, Notes</span>
+    <span class="syntax">Progress: Frontend redesign, 75%, Waiting on feedback</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Callout: Highlight a tip or note.</p>
+    <span class="syntax">Callout: Type, Content</span>
+    <span class="syntax">Callout: tip, Test this locally first</span>
+  </div>
+
+  <div class="feature-section">
+    <p>CodeSnippet: Display code in a styled box.</p>
+    <span class="syntax">CodeSnippet: Language, Code</span>
+    <span class="syntax">CodeSnippet: javascript, console.log('Hello');</span>
+  </div>
+
+  <div class="feature-section">
+    <p>Image: Embed an image with a caption.</p>
+    <span class="syntax">Image: Src, Alt, Caption</span>
+    <span class="syntax">Image: /blog-placeholder-1.jpg, Dashboard, New design preview</span>
+  </div>
+
+  <h2>Tips</h2>
+  <p>
+    Add a blank line before and after each component for smooth rendering. Use commas to separate values in components, keeping extra spaces minimal. See <span class="syntax">new-post.mdx</span> in <span class="syntax">src/content/blog/</span> for a full example!
+  </p>
 </Layout>
