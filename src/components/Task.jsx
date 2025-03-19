@@ -2,7 +2,7 @@ import React from 'react';
 
 const Task = ({ title, assignee, status }) => {
   return (
-    <div className="border-l-4 border-green-600 bg-white p-6 my-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+    <div className="border-l-4 border-green-600 bg-green-50 p-6 my-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
       <h3 className="text-xl font-bold text-green-800 mb-4">Task</h3>
       <div className="space-y-3">
         <div className="flex items-start">

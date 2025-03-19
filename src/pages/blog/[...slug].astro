@@ -12,6 +12,11 @@ import Callout from '../../components/Callout.jsx';
 import CodeSnippet from '../../components/CodeSnippet.jsx';
 import Image from '../../components/Image.jsx';
 import Quote from '../../components/Quote.jsx';
+import Idea from '../../components/Idea.jsx';
+import Shoutout from '../../components/Shoutout.jsx';
+import Milestone from '../../components/Milestone.jsx';
+import Timeline from '../../components/Timeline.jsx';
+import IconBullet from '../../components/IconBullet.jsx';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -28,5 +33,5 @@ const { Content } = await render(post);
 ---
 
 <BlogPost {...post.data}>
-  <Content components={{ Meeting, Task, Blocker, ActionItem, StandUpSummary, Progress, Callout, CodeSnippet, Image, Quote }} />
+  <Content components={{ Meeting, Task, Blocker, ActionItem, StandUpSummary, Progress, Callout, CodeSnippet, Image, Quote, Idea, Shoutout, Milestone, Timeline, IconBullet }} />
 </BlogPost>

@@ -1,26 +1,33 @@
 import React from 'react';
 
 const StandUpSummary = ({ date, team, summary }) => {
+  const isList = summary.includes(',');
+  const summaryItems = isList ? summary.split(',').map(item => item.trim()) : [summary];
+
   return (
-    <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 my-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border border-indigo-200">
-      <h3 className="text-xl font-bold text-indigo-800 mb-4 flex items-center">
-        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-        Stand-Up Summary
-      </h3>
-      <div className="space-y-3">
-        <div className="flex items-center text-indigo-700">
-          <span className="font-medium w-20">Date:</span>
-          <span>{date}</span>
+    <div className="my-6 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-lg shadow-lg transform hover:scale-102 transition-all duration-300">
+      <div className="p-6 space-y-4">
+        <div className="flex items-center justify-between">
+          <h3 className="text-xl font-bold text-purple-800 flex items-center">
+            <span className="text-2xl mr-2">🎯</span>
+            Daily Standup
+          </h3>
+          <div className="text-sm text-indigo-600 font-medium">{date}</div>
         </div>
-        <div className="flex items-center text-indigo-700">
-          <span className="font-medium w-20">Team:</span>
-          <span>{team}</span>
-        </div>
-        <div className="flex items-center text-indigo-600">
-          <span className="font-medium w-20">Summary:</span>
-          <span>{summary}</span>
+        <div className="bg-white/50 rounded-lg p-4">
+          <div className="text-purple-700 font-medium mb-2">Team: {team}</div>
+          {isList ? (
+            <ul className="space-y-2">
+              {summaryItems.map((item, index) => (
+                <li key={index} className="flex items-start space-x-2">
+                  <span className="text-indigo-500 mt-1">▹</span>
+                  <span className="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-gray-700">{summary}</p>
+          )}
         </div>
       </div>
     </div>
