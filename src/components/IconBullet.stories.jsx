@@ -14,7 +14,7 @@ export default {
 
 export const Default = {
   args: {
-    icon: 'fa-lightbulb-o',
+    icon: 'fa-lightbulb',
     heading: 'Feature Idea',
     description: 'Add real-time notifications to dashboard',
   },
@@ -22,7 +22,7 @@ export const Default = {
 
 export const TaskStep = {
   args: {
-    icon: 'fa-list-alt',
+    icon: 'fa-user',
     heading: 'Task List Update',
     description: 'Add new items by end of day',
   },

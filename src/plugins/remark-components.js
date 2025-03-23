@@ -69,6 +69,36 @@ export function remarkComponents() {
             };
           }
 
+          if (text.startsWith('ResourceCard:')) {
+            const parts = text.slice('ResourceCard:'.length).trim().split(/,\s*/);
+            if (parts.length < 2) throw new Error('ResourceCard requires title and url');
+            const [title, url] = parts;
+            replacement = {
+              type: 'mdxJsxFlowElement',
+              name: 'ResourceCard',
+              attributes: [
+                { type: 'mdxJsxAttribute', name: 'title', value: title },
+                { type: 'mdxJsxAttribute', name: 'url', value: url },
+              ],
+              children: [],
+            };
+          }
+
+          if (text.startsWith('InteractiveTaskCard:')) {
+            const parts = text.slice('InteractiveTaskCard:'.length).trim().split(/,\s*/);
+            if (parts.length < 2) throw new Error('InteractiveTaskCard requires title and details');
+            const [title, details] = parts;
+            replacement = {
+              type: 'mdxJsxFlowElement',
+              name: 'InteractiveTaskCard',
+              attributes: [
+                { type: 'mdxJsxAttribute', name: 'title', value: title },
+                { type: 'mdxJsxAttribute', name: 'details', value: details },
+              ],
+              children: [],
+            };
+          }
+
           if (text.startsWith('ActionItem:')) {
             const details = text.slice('ActionItem:'.length).trim();
             const [description, assignee, dueDate] = details.split(',').map(part => part.trim());

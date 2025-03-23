@@ -1,0 +1,13 @@
+import"./index-DmM0KDA7.js";import{j as e}from"./jsx-runtime-D_zvdyIk.js";import{F as y,I as m,l as I}from"./index-DDv-buoc.js";I.add(...Object.values(m).filter(s=>s.iconName));const n=["bg-blue-600","bg-blue-700","bg-sky-600","bg-cyan-600","bg-purple-600","bg-violet-600","bg-indigo-600","bg-fuchsia-600","bg-red-600","bg-rose-600","bg-pink-600","bg-crimson-600","bg-green-600","bg-emerald-600","bg-teal-600","bg-lime-600","bg-amber-600","bg-orange-600","bg-yellow-600","bg-slate-600","bg-zinc-600","bg-stone-600","bg-cyan-700","bg-teal-700","bg-emerald-700","bg-violet-700","bg-indigo-700","bg-purple-700","bg-fuchsia-700","bg-rose-700"],p=({icon:s,heading:b,description:u})=>{const f=n[Math.floor(Math.random()*n.length)],h=s.replace("fa-","").split("-").map(a=>a.charAt(0).toUpperCase()+a.slice(1)).join(""),x=m[`fa${h}`]||void 0;return e.jsxs("div",{className:"process-step flex flex-col md:flex-row items-start my-6",children:[e.jsx("div",{className:`process-icon ${f} text-white w-10 h-10 rounded-full flex items-center justify-center mr-4`,children:e.jsx(y,{icon:x,className:"h-6 w-6"})}),e.jsxs("div",{className:"process-content mt-4 md:mt-0",children:[e.jsx("h3",{className:"font-bold text-lg text-gray-800",children:b}),e.jsx("p",{className:"text-gray-600",children:u})]})]})};p.__docgenInfo={description:"",methods:[],displayName:"IconBullet"};const A={title:"Components/IconBullet",component:p,argTypes:{icon:{control:"text"},heading:{control:"text"},description:{control:"text"}},tags:["autodocs"]},t={args:{icon:"fa-lightbulb",heading:"Feature Idea",description:"Add real-time notifications to dashboard"}},o={args:{icon:"fa-user",heading:"Task List Update",description:"Add new items by end of day"}};t.parameters={docs:{description:{story:"Use `IconBullet` for highlighted points. Example: `IconBullet: fa-lightbulb-o Feature Idea | Add real-time notifications to dashboard`"}}};var r,i,c;t.parameters={...t.parameters,docs:{...(r=t.parameters)==null?void 0:r.docs,source:{originalSource:`{
+  args: {
+    icon: 'fa-lightbulb',
+    heading: 'Feature Idea',
+    description: 'Add real-time notifications to dashboard'
+  }
+}`,...(c=(i=t.parameters)==null?void 0:i.docs)==null?void 0:c.source}}};var l,d,g;o.parameters={...o.parameters,docs:{...(l=o.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    icon: 'fa-user',
+    heading: 'Task List Update',
+    description: 'Add new items by end of day'
+  }
+}`,...(g=(d=o.parameters)==null?void 0:d.docs)==null?void 0:g.source}}};const k=["Default","TaskStep"];export{t as Default,o as TaskStep,k as __namedExportsOrder,A as default};

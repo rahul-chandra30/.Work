@@ -1,0 +1,56 @@
+# Font Awesome Icons Reference
+
+Bell ----> fa-bell
+Bookmark ----> fa-bookmark
+Calendar ----> fa-calendar
+Calendar Alt ----> fa-calendar-alt
+Calendar Check ----> fa-calendar-check
+Calendar Minus ----> fa-calendar-minus
+Calendar Plus ----> fa-calendar-plus
+Check Circle ----> fa-check-circle
+Check Square ----> fa-check-square
+Circle ----> fa-circle
+Clock ----> fa-clock
+Comment ----> fa-comment
+Comments ----> fa-comments
+Copy ----> fa-copy
+Edit ----> fa-edit
+Envelope ----> fa-envelope
+Envelope Open ----> fa-envelope-open
+File ----> fa-file
+File Alt ----> fa-file-alt
+Flag ----> fa-flag
+Folder ----> fa-folder
+Folder Open ----> fa-folder-open
+Frown ----> fa-frown
+Heart ----> fa-heart
+Hourglass ----> fa-hourglass
+Image ----> fa-image
+Keyboard ----> fa-keyboard
+Lightbulb ----> fa-lightbulb
+List Alt ----> fa-list-alt
+Map ----> fa-map
+Meh ----> fa-meh
+Minus Square ----> fa-minus-square
+Money Bill Alt ----> fa-money-bill-alt
+Moon ----> fa-moon
+Paper Plane ----> fa-paper-plane
+Play Circle ----> fa-play-circle
+Plus Square ----> fa-plus-square
+Question Circle ----> fa-question-circle
+Save ----> fa-save
+Share Square ----> fa-share-square
+Smile ----> fa-smile
+Square ----> fa-square
+Star ----> fa-star
+Sun ----> fa-sun
+Thumbs Down ----> fa-thumbs-down
+Thumbs Up ----> fa-thumbs-up
+Times Circle ----> fa-times-circle
+Trash Alt ----> fa-trash-alt
+User ----> fa-user
+User Circle ----> fa-user-circle
+Window Close ----> fa-window-close
+Window Maximize ----> fa-window-maximize
+Window Minimize ----> fa-window-minimize
+Window Restore ----> fa-window-restore
