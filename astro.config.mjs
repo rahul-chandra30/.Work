@@ -1,19 +1,18 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind'; // Use @astrojs/tailwind instead of @tailwindcss/vite
+import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
-import { remarkMeeting } from './src/plugins/remark-meeting.js';
+import { remarkComponents } from './src/plugins/remark-components.js';
 
 export default defineConfig({
   site: 'https://example.com',
   integrations: [
     mdx({
-      remarkPlugins: [remarkMeeting],
+      remarkPlugins: [remarkComponents],
     }),
     sitemap(),
     react(),
-    tailwind(), // Add this
+    tailwind(),
   ],
-  // Remove vite.plugins if using @astrojs/tailwind (it handles Vite internally)
 });

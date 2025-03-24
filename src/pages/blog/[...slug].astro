@@ -3,13 +3,28 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 import { render } from 'astro:content';
 import Meeting from '../../components/Meeting.jsx';
+import Task from '../../components/Task.jsx';
+import Blocker from '../../components/Blocker.jsx';
+import ActionItem from '../../components/ActionItem.jsx';
+import StandUpSummary from '../../components/StandUpSummary.jsx';
+import Progress from '../../components/Progress.jsx';
+import Callout from '../../components/Callout.jsx';
+import CodeSnippet from '../../components/CodeSnippet.jsx';
+import Image from '../../components/Image.jsx';
+import Idea from '../../components/Idea.jsx';
+import Shoutout from '../../components/Shoutout.jsx';
+import Milestone from '../../components/Milestone.jsx';
+import Timeline from '../../components/Timeline.jsx';
+import IconBullet from '../../components/IconBullet.jsx';
+import ResourceCard from '../../components/ResourceCard.jsx';
+import InteractiveTaskCard from '../../components/InteractiveTaskCard.jsx';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.id },
-		props: post,
-	}));
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: post,
+  }));
 }
 
 type Props = CollectionEntry<'blog'>;
@@ -19,5 +34,25 @@ const { Content } = await render(post);
 ---
 
 <BlogPost {...post.data}>
-	<Content components={{ Meeting }} /> {/* Pass the Meeting component to MDX */}
+  <Content 
+    components={{ 
+      Meeting, 
+      Task, 
+      Blocker, 
+      ActionItem, 
+      StandUpSummary, 
+      Progress, 
+      Callout, 
+      CodeSnippet, 
+      Image, 
+      Idea, 
+      Shoutout, 
+      Milestone, 
+      Timeline, 
+      IconBullet, 
+      InteractiveTaskCard, 
+      ResourceCard,
+
+    }} 
+  />
 </BlogPost>
