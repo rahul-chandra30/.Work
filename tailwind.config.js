@@ -2,12 +2,12 @@
 module.exports = {
   content: [
     './src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}',
-    './.storybook/**/*.{js,jsx,ts,tsx}',// Scan all source files
+    './.storybook/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/typography'), // Typography plugin
+    require('@tailwindcss/typography'),
   ],
 };

@@ -1,10 +1,9 @@
 import React from 'react';
 
 const Progress = ({ task, percentage, notes }) => {
-  // Handle both string (e.g., "75%") and number (e.g., 75) inputs
   const percentageNum = typeof percentage === 'string' 
     ? parseInt(percentage.replace('%', ''), 10) 
-    : parseInt(percentage, 10) || 0; // Fallback to 0 if invalid
+    : parseInt(percentage, 10) || 0; 
   const progressWidth = `${percentageNum}%`;
   const isMilestone = notes.startsWith('Milestone:');
   const milestoneText = isMilestone ? notes.slice('Milestone:'.length).trim() : null;

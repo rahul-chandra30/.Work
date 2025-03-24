@@ -13,7 +13,6 @@ module.exports = {
     autodocs: 'tag',
   },
   async viteFinal(config) {
-    // Add PostCSS with Tailwind
     config.css = config.css || {};
     config.css.postcss = {
       plugins: [

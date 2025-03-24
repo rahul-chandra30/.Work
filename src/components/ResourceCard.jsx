@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ResourceCard = ({ title, url, emoji = '🔖' }) => {
+const ResourceCard = ({ title, url, emoji = '📚' }) => {
   return (
     <a
       href={url}

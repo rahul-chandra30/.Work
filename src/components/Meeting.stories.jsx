@@ -16,7 +16,7 @@ export default {
   tags: ['autodocs'],
 };
 
-// Standard meeting with all details
+
 export const Default = {
   args: {
     attendees: 'Prathamesh and Rahul',
