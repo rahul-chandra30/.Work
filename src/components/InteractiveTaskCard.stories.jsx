@@ -21,6 +21,13 @@ export default {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <div style={{ width: '500px', padding: '20px' }}>
+        <Story />
+      </div>
+    ),
+  ],
   tags: ['autodocs'],
 };
 
@@ -32,10 +39,10 @@ export const BasicTask = {
   },
 };
 
-export const UpcomingTask = {
+export const LongTask = {
   args: {
     title: 'Deploy to Production',
-    details: 'Run final tests, merge PR #182, deploy to staging first, then promote to production after QA approval.',
+    details: 'Run final tests, merge PR #182, deploy to staging first, then promote to production after QA approval. The deployment should be coordinated with the DevOps team and scheduled during off-peak hours.',
     emoji: '🚀',
   },
 };
@@ -51,15 +58,15 @@ export const PendingReview = {
 BasicTask.parameters = {
   docs: {
     description: {
-      story: 'Use `InteractiveTaskCard` for tasks with additional details that should be displayed on demand. Example: `InteractiveTaskCard: Complete API Documentation, Add examples for all endpoints and error responses. Include authentication flow diagrams.`',
+      story: 'Basic example of a task card with a simple description.',
     },
   },
 };
 
-UpcomingTask.parameters = {
+LongTask.parameters = {
   docs: {
     description: {
-      story: 'Great for highlighting important deployment or release tasks.',
+      story: 'Example with longer text content to demonstrate scrolling behavior.',
     },
   },
 };

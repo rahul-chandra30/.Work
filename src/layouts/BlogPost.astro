@@ -4,10 +4,12 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import GiscusComments from '../components/GiscusComments.jsx'; // Add this import
 
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const identifier = Astro.url.pathname; // e.g., "/blog/example-post"
 ---
 
 <html lang="en">
@@ -52,6 +54,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+			.comments-section {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				border-top: 1px solid rgb(var(--gray-light));
+			}
 		</style>
 	</head>
 
@@ -78,6 +87,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						<hr />
 					</div>
 					<slot />
+				</div>
+				<div class="comments-section">
+					<GiscusComments client:load identifier={identifier} title={title} />
 				</div>
 			</article>
 		</main>
